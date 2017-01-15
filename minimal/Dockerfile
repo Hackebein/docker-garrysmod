@@ -3,7 +3,8 @@ MAINTAINER Lars Olzem <hackebein@gmail.com>
 
 ARG BASEDIR=/opt/garrysmod
 
-ENV PORT="27015" \
+ENV BASEDIR=$BASEDIR
+    PORT="27015" \
     TICKRATE="66" \
     WORKSHOPCOLLECTIONID="" \
     #http://steamcommunity.com/dev/apikey
