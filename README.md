@@ -12,7 +12,7 @@ Garry's Mod is a physics sandbox. There aren't any predefined aims or goals. We 
 
 * on base image update (supported by Docker Hub)
 * on repository update (supported by Docker Hub)
-* ~~on steam repository content update (supported by [Huginn](https://github.com/Hackebein/docker-garrysmod/blob/master/huginn.json))~~ coming soon
+* ~~on steam repository content update (supported by [Huginn](https://github.com/Hackebein/docker-garrysmod/blob/master/Huginn.json))~~ coming soon
 
 # Quick Start
 
