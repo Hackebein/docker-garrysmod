@@ -1,5 +1,4 @@
 FROM hackebein/steamcmd:latest
-MAINTAINER Lars Olzem <hackebein@gmail.com>
 
 ARG BASEDIR=/opt/garrysmod
 

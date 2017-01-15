@@ -1,5 +1,4 @@
 FROM hackebein/garrysmod:minimal
-MAINTAINER Lars Olzem <hackebein@gmail.com>
 
 ARG BASEDIR=/opt/garrysmod
 
