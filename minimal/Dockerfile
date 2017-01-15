@@ -3,7 +3,7 @@ MAINTAINER Lars Olzem <hackebein@gmail.com>
 
 ARG BASEDIR=/opt/garrysmod
 
-ENV BASEDIR=$BASEDIR
+ENV BASEDIR=$BASEDIR \
     PORT="27015" \
     TICKRATE="66" \
     WORKSHOPCOLLECTIONID="" \
