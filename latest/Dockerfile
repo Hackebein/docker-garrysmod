@@ -1,1 +1,1 @@
-FROM hackebein/garrysmod:basic
+FROM hackebein/garrysmod:recommended
