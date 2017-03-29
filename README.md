@@ -1,9 +1,9 @@
 # Supported tags and respective `Dockerfile` links
 
 * `minimal` [(minimal/Dockerfile)](https://github.com/Hackebein/docker-garrysmod/blob/master/minimal/Dockerfile)
-* `master`, `latest` [(latest/Dockerfile)](https://github.com/Hackebein/docker-garrysmod/blob/master/master/Dockerfile)
-* ~~`full` [(full/Dockerfile)](https://github.com/Hackebein/docker-garrysmod/blob/master/full/Dockerfile).~~ coming soon
-* ~~`beta` [(beta/Dockerfile)](https://github.com/Hackebein/docker-garrysmod/blob/master/beta/Dockerfile).~~ coming soon
+* `master`, `latest` [(latest/Dockerfile)](https://github.com/Hackebein/docker-garrysmod/blob/master/latest/Dockerfile)
+* ~~`full` (full/Dockerfile).~~ coming soon
+* ~~`beta` (beta/Dockerfile).~~ coming soon
 
 # What is Garry's Mod?
 
