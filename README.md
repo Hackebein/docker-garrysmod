@@ -19,25 +19,62 @@ Garry's Mod is a physics sandbox. There aren't any predefined aims or goals. We 
 
 ## Basic
 
-docker run --expose 27015 hackebein/garrysmod
+`
+docker run \
+    --expose 27015 \
+    hackebein/garrysmod
+`
 
 ## Public
 
-docker run --expose 27015 -e "GLST=..." hackebein/garrysmod
+`
+docker run \
+    --expose 27015 \
+    -e "GLST=..." \
+    hackebein/garrysmod
+`
 
 Get your [GLST](http://steamcommunity.com/dev/managegameservers) (`APPID: 4000`)
 
 ## Public with Workshop Collection
 
-docker run --expose 27015 -e "GLST=..." -e "AUTHKEY=..." -e "WORKSHOPCOLLECTIONID=..." hackebein/garrysmod
+`
+docker run \
+    --expose 27015 \
+    -e "GLST=..." \
+    -e "AUTHKEY=..." \
+    -e "WORKSHOPCOLLECTIONID=..." \
+    hackebein/garrysmod
+`
 
 Get your [AUTHKEY](http://steamcommunity.com/dev/apikey)
 
 ## Config
 
-docker run --expose 27015 -e "GLST=..." -e "AUTHKEY=..." -e "WORKSHOPCOLLECTIONID=..." --volume ./mycfg:/opt/garrysmod/garrysmod/volume hackebein/garrysmod
+`
+docker run \
+    --expose 27015 \
+    -e "GLST=..." \
+    -e "AUTHKEY=..." \
+    -e "WORKSHOPCOLLECTIONID=..." \
+    --volume ./mycfg:/opt/garrysmod/garrysmod/volume \
+    hackebein/garrysmod
+`
 
-Autoload `server.cfg` from volume.
+Autoload `{gamemode}.cfg` from volume.
+
+By default environment you can mount files like `my.server.cfg` and `my.{gamemode}.cfg` for Server and gamemode specific configurations
+
+`
+docker run \
+    --expose 27015 \
+    -e "GLST=..." \
+    -e "AUTHKEY=..." \
+    -e "WORKSHOPCOLLECTIONID=..." \
+    --volume ./mycfg/my.server.cfg:/opt/garrysmod/garrysmod/volume/ \
+    --volume ./mycfg/my.terrortown.cfg:/opt/garrysmod/garrysmod/volume/ \
+    hackebein/garrysmod
+`
 
 ## Additional Environment
 

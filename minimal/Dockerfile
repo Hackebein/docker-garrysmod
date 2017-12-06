@@ -16,7 +16,7 @@ ENV BASEDIR=$BASEDIR \
     MAP="gm_flatgrass" \
     #http://steamcommunity.com/dev/managegameservers APPID: 4000
     GLST="" \
-    CONFIG="server.cfg" \
+    CONFIG="${GAMEMODE}.cfg" \
     CUSTOMPARAMETERS=""
 
 RUN apt-get update -q && \
