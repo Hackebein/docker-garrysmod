@@ -1,9 +1,9 @@
 # Supported tags and respective `Dockerfile` links
 
 * `minimal` [(minimal/Dockerfile)](https://github.com/Hackebein/docker-garrysmod/blob/master/minimal/Dockerfile)
-* `master`, `latest` [(latest/Dockerfile)](https://github.com/Hackebein/docker-garrysmod/blob/master/master/Dockerfile)
-* ~~`full` [(full/Dockerfile)](https://github.com/Hackebein/docker-garrysmod/blob/master/full/Dockerfile).~~ coming soon
-* ~~`beta` [(beta/Dockerfile)](https://github.com/Hackebein/docker-garrysmod/blob/master/beta/Dockerfile).~~ coming soon
+* `master`, `latest` [(latest/Dockerfile)](https://github.com/Hackebein/docker-garrysmod/blob/master/latest/Dockerfile)
+* ~~`full` (full/Dockerfile).~~ coming soon
+* ~~`beta` (beta/Dockerfile).~~ coming soon
 
 # What is Garry's Mod?
 
@@ -13,7 +13,7 @@ Garry's Mod is a physics sandbox. There aren't any predefined aims or goals. We 
 
 * on base image update (supported by Docker Hub)
 * on repository update (supported by Docker Hub)
-* ~~on steam repository content update (supported by [Huginn](https://github.com/Hackebein/docker-garrysmod/blob/master/Huginn.json))~~ coming soon
+* on steam repository content update (supported by [dexi.io](https://dexi.io))
 
 # Quick Start
 
