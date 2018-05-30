@@ -25,7 +25,7 @@ RUN apt-get update -q \
  && rm -rf \
         /tmp/* \
         /var/lib/apt/lists/* \
-        /var/tmp/*
+        /var/tmp/* \
  && /usr/games/steamcmd \
         +login anonymous \
         +force_install_dir $BASEDIR \
