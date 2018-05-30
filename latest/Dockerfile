@@ -19,19 +19,22 @@ ENV BASEDIR=$BASEDIR \
     CONFIG="${GAMEMODE}.cfg" \
     CUSTOMPARAMETERS=""
 
-RUN apt-get update -q && \
-    apt-get install -yqq lib32tinfo5 && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* &&  \
-    /usr/games/steamcmd \
+RUN apt-get update -q \
+ && apt-get install -yqq lib32tinfo5 gdb \
+ && apt-get clean \
+ && rm -rf \
+        /tmp/* \
+        /var/lib/apt/lists/* \
+        /var/tmp/*
+ && /usr/games/steamcmd \
         +login anonymous \
         +force_install_dir $BASEDIR \
         # cstrike
         +app_update 232330 -validate -language en \
         # garrysmod
         +app_update 4020 -validate -language en \
-        +quit && \
-    rm -rf $BASEDIR/garrysmod/cfg/*
+        +quit \
+ && rm -rf $BASEDIR/garrysmod/cfg/*
 
 COPY cfg $BASEDIR/garrysmod/cfg
 
