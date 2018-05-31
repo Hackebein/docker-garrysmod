@@ -20,7 +20,7 @@ ENV BASEDIR=$BASEDIR \
     CUSTOMPARAMETERS=""
 
 RUN apt-get update -q \
- && apt-get install -yqq lib32tinfo5 gdb \
+ && apt-get install -yqq lib32tinfo5 paxctl \
  && apt-get clean \
  && rm -rf \
         /tmp/* \
