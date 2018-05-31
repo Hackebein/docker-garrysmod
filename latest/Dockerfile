@@ -20,7 +20,7 @@ ENV BASEDIR=$BASEDIR \
     CUSTOMPARAMETERS=""
 
 RUN apt-get update -q \
- && apt-get install -yqq lib32tinfo5 gdb \
+ && apt-get install -yqq lib32tinfo5 paxctl \
  && apt-get clean \
  && rm -rf \
         /tmp/* \
@@ -34,7 +34,8 @@ RUN apt-get update -q \
         # garrysmod
         +app_update 4020 -validate -language en \
         +quit \
- && rm -rf $BASEDIR/garrysmod/cfg/*
+ && rm -rf $BASEDIR/garrysmod/cfg/* \
+ && paxctl -cm "$BASEDIR/srcds_linux"
 
 COPY cfg $BASEDIR/garrysmod/cfg
 

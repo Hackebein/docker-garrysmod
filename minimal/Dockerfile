@@ -32,7 +32,8 @@ RUN apt-get update -q \
         # garrysmod
         +app_update 4020 -validate -language en \
         +quit \
- && rm -rf $BASEDIR/garrysmod/cfg/*
+ && rm -rf $BASEDIR/garrysmod/cfg/* \
+ && paxctl -cm "$BASEDIR/srcds_linux"
 
 COPY cfg $BASEDIR/garrysmod/cfg
 
