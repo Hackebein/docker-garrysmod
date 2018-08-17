@@ -15,15 +15,15 @@ ENV APPS="4020" \
     CUSTOMPARAMETERS="" \
     SRCDSPARAMS="\
         -game garrysmod \
-        -tickrate ${TICKRATE} \
-        -maxplayers ${MAXPLAYERS} \
-        -authkey ${AUTHKEY} \
-        +host_workshop_collection ${WORKSHOPCOLLECTIONID} \
-        +gamemode ${GAMEMODE} \
-        +map ${MAP} \
-        +sv_setsteamaccount ${GLST} \
-        +servercfgfile ${CONFIG} \
-        ${CUSTOMPARAMETERS} \
+        -tickrate \${TICKRATE} \
+        -maxplayers \${MAXPLAYERS} \
+        -authkey \${AUTHKEY} \
+        +host_workshop_collection \${WORKSHOPCOLLECTIONID} \
+        +gamemode \${GAMEMODE} \
+        +map \${MAP} \
+        +sv_setsteamaccount \${GLST} \
+        +servercfgfile \${CONFIG} \
+        \${CUSTOMPARAMETERS} \
     "
 
 COPY cfg $BASEDIR/garrysmod/cfg
