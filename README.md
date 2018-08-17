@@ -1,10 +1,3 @@
-# Supported tags and respective `Dockerfile` links
-
-* `minimal` [(minimal/Dockerfile)](https://github.com/Hackebein/docker-garrysmod/blob/master/minimal/Dockerfile)
-* `latest` [(latest/Dockerfile)](https://github.com/Hackebein/docker-garrysmod/blob/master/latest/Dockerfile)
-* ~~`full` (full/Dockerfile).~~ coming soon
-* ~~`beta` (beta/Dockerfile).~~ coming soon
-
 # What is Garry's Mod?
 
 Garry's Mod is a physics sandbox. There aren't any predefined aims or goals. We give you the tools and leave you to play.
