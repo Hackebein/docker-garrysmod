@@ -1,18 +1,32 @@
 FROM hackebein/srcds
 
-ENV APPS="4020" \
-    TICKRATE="66" \
-    MAXPLAYERS="16" \
-    #http://steamcommunity.com/dev/apikey
+ENV \
+	# App
+	APPS="4020" \
+	#
+	# Public access
+	# APPID: 4000
+    # http://steamcommunity.com/dev/managegameservers
+    GLST="" \
+	#
+	# Workshop config
+    # http://steamcommunity.com/dev/apikey
     AUTHKEY="" \
     WORKSHOPCOLLECTIONID="" \
-    # sandbox or terrortown
+	#
+	# Server config
+    TICKRATE="66" \
+    MAXPLAYERS="16" \
     GAMEMODE="sandbox" \
+	GAMETYPE="0" \
     MAP="gm_flatgrass" \
-    #http://steamcommunity.com/dev/managegameservers APPID: 4000
-    GLST="" \
+    MAPGROUP="mg_active" \
     CONFIG="server.cfg" \
+	#
+	# Other
     CUSTOMPARAMETERS="" \
+	#
+	# Start parameters
     SRCDSPARAMS="\
         -game garrysmod \
         -tickrate \${TICKRATE} \
