@@ -36,6 +36,7 @@ Get your [GLST](http://steamcommunity.com/dev/managegameservers) (`APPID: 4000`)
 
 ## Workshop Collection
 Workshop access requires the API.
+
 ```
 docker run \
     --expose 27015 \
@@ -64,6 +65,7 @@ docker run \
     -v ./server.cfg:/opt/garrysmod/garrysmod/cfg/server.cfg \
     hackebein/garrysmod
 ```
+
 Go to [Workshopp Collection](https://steamcommunity.com/sharedfiles/filedetails/?id=843519054)
 
 ## Additional Environment
@@ -91,3 +93,7 @@ MAXPLAYERS: Max players
 
 CUSTOMPARAMETERS: additional parameters
 (`Default: `)
+
+## More Options
+
+You can found more configuration options on the parent image page [hackebein/srcds](https://hub.docker.com/r/hackebein/srcds)
