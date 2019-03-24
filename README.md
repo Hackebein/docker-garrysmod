@@ -2,12 +2,6 @@
 
 Garry's Mod is a physics sandbox. There aren't any predefined aims or goals. We give you the tools and leave you to play.
 
-# Update Hooks
-
-* on base image update (supported by Docker Hub)
-* on repository update (supported by Docker Hub)
-* on steam repository content update (supported by [dexi.io](https://dexi.io))
-
 # Quick Start
 
 ## Basic
@@ -18,7 +12,18 @@ docker run \
     hackebein/garrysmod
 ```
 
+## Enable API
+
+```
+docker run \
+    --expose 27015 \
+    -e "AUTHKEY=..." \
+    hackebein/garrysmod
+```
+Get your [AUTHKEY](http://steamcommunity.com/dev/apikey)
+
 ## Public
+If you have activated the API, this step happens automatically.
 
 ```
 docker run \
@@ -29,45 +34,37 @@ docker run \
 
 Get your [GLST](http://steamcommunity.com/dev/managegameservers) (`APPID: 4000`)
 
-## Public with Workshop Collection
-
+## Workshop Collection
+Workshop access requires the API.
 ```
 docker run \
     --expose 27015 \
-    -e "GLST=..." \
     -e "AUTHKEY=..." \
     -e "WORKSHOPCOLLECTIONID=..." \
     hackebein/garrysmod
 ```
-
-Get your [AUTHKEY](http://steamcommunity.com/dev/apikey)
 
 ## Config
 
 ```
 docker run \
     --expose 27015 \
-    -e "GLST=..." \
-    -e "AUTHKEY=..." \
-    -e "WORKSHOPCOLLECTIONID=..." \
-    -v ./mycfg:/opt/garrysmod/garrysmod/volume \
+    -v ./server.cfg:/opt/garrysmod/garrysmod/cfg/server.cfg \
     hackebein/garrysmod
 ```
 
-Autoload `{gamemode}.cfg` from volume.
-
-By default environment you can mount files like `my.server.cfg` and `my.{gamemode}.cfg` for Server and gamemode specific configurations
-
+## Example for TTT
 ```
 docker run \
     --expose 27015 \
-    -e "GLST=..." \
     -e "AUTHKEY=..." \
-    -e "WORKSHOPCOLLECTIONID=..." \
-    -v ./mycfg/my.server.cfg:/opt/garrysmod/garrysmod/volume/ \
-    -v ./mycfg/my.terrortown.cfg:/opt/garrysmod/garrysmod/volume/ \
+    -e "GAMEMODE=terrortown" \
+    -e "MAP=ttt_minecraft_b5" \
+    -e "WORKSHOPCOLLECTIONID=843519054" \
+    -v ./server.cfg:/opt/garrysmod/garrysmod/cfg/server.cfg \
     hackebein/garrysmod
 ```
+Go to [Workshopp Collection](https://steamcommunity.com/sharedfiles/filedetails/?id=843519054)
 
 ## Additional Environment
 
@@ -80,7 +77,7 @@ TICKRATE: Tickrate of server, **Attention:** Change not recommended
 CLIENTPORT:
 (`Default: 27005`)
 
-GAMEMODE: 
+GAMEMODE:
 (`Default: sandbox`)
 
 MAP: Map on Server start
@@ -91,12 +88,6 @@ CONFIG: Server config, **Attention:** Change not recommended
 
 MAXPLAYERS: Max players
 (`Default: 16`)
-
-LOADURLIMG: URL for LOADURL default
-(`Default: <URL>`)
-
-LOADURL: Loading screen URL
-(`Default: <LOADURLIMG Fullscreen>`)
 
 CUSTOMPARAMETERS: additional parameters
 (`Default: `)
