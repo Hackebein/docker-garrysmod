@@ -16,7 +16,7 @@ ENV \
 	# http://steamcommunity.com/dev/managegameservers
 	GLST="" \
 	#
-	# Workshop config (require API)
+	# Workshop (require API)
 	WORKSHOPCOLLECTIONID="" \
 	#
 	# Server config
