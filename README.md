@@ -70,14 +70,8 @@ Go to [Workshopp Collection](https://steamcommunity.com/sharedfiles/filedetails/
 
 ## Additional Environment
 
-PORT: Connection Port
-(`Default: 27015`)
-
 TICKRATE: Tickrate of server, **Attention:** Change not recommended
 (`Default: 66`)
-
-CLIENTPORT:
-(`Default: 27005`)
 
 GAMEMODE:
 (`Default: sandbox`)
