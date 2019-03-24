@@ -4,14 +4,19 @@ ENV \
 	# App
 	APPS="4020" \
 	#
+	# API
+	# http://steamcommunity.com/dev/apikey
+	AUTHKEY="" \
+	#
 	# Public access
+	# automatic via API
+	GLSTAPP="4000" \
+	# manual
 	# APPID: 4000
 	# http://steamcommunity.com/dev/managegameservers
 	GLST="" \
 	#
-	# Workshop config
-	# http://steamcommunity.com/dev/apikey
-	AUTHKEY="" \
+	# Workshop config (require API)
 	WORKSHOPCOLLECTIONID="" \
 	#
 	# Server config
@@ -35,7 +40,6 @@ ENV \
 		+host_workshop_collection \${WORKSHOPCOLLECTIONID} \
 		+gamemode \${GAMEMODE} \
 		+map \${MAP} \
-		+sv_setsteamaccount \${GLST} \
 		+servercfgfile \${CONFIG} \
 		\${CUSTOMPARAMETERS} \
 	"
