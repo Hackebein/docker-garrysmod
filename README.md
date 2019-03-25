@@ -50,7 +50,7 @@ docker run \
 ```
 docker run \
     --expose 27015 \
-    -v ./server.cfg:/opt/garrysmod/garrysmod/cfg/server.cfg \
+    -v ./server.cfg:/opt/steam/garrysmod/cfg/server.cfg \
     hackebein/garrysmod
 ```
 
@@ -62,7 +62,7 @@ docker run \
     -e "GAMEMODE=terrortown" \
     -e "MAP=ttt_minecraft_b5" \
     -e "WORKSHOPCOLLECTIONID=843519054" \
-    -v ./server.cfg:/opt/garrysmod/garrysmod/cfg/server.cfg \
+    -v ./server.cfg:/opt/steam/garrysmod/cfg/server.cfg \
     hackebein/garrysmod
 ```
 
