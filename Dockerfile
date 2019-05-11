@@ -1,6 +1,7 @@
 FROM hackebein/srcds
 
 ENV \
+	SIGNALS_ENABLE="false"
 	# App
 	APPS="4020" \
 	#
