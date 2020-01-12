@@ -7,16 +7,18 @@ Garry's Mod is a physics sandbox. There aren't any predefined aims or goals. We 
 ## Basic
 
 ```
-docker run \
-    --expose 27015 \
+docker run -it \
+    -p 27015:27015/tcp \
+    -p 27015:27015/udp \
     hackebein/garrysmod
 ```
 
 ## Enable API
 
 ```
-docker run \
-    --expose 27015 \
+docker run -it \
+    -p 27015:27015/tcp \
+    -p 27015:27015/udp \
     -e "AUTHKEY=..." \
     hackebein/garrysmod
 ```
@@ -26,8 +28,9 @@ Get your [AUTHKEY](http://steamcommunity.com/dev/apikey)
 If you have activated the API, this step happens automatically.
 
 ```
-docker run \
-    --expose 27015 \
+docker run -it \
+    -p 27015:27015/tcp \
+    -p 27015:27015/udp \
     -e "GLST=..." \
     hackebein/garrysmod
 ```
@@ -38,8 +41,9 @@ Get your [GLST](http://steamcommunity.com/dev/managegameservers) (`APPID: 4000`)
 Workshop access requires the API.
 
 ```
-docker run \
-    --expose 27015 \
+docker run -it \
+    -p 27015:27015/tcp \
+    -p 27015:27015/udp \
     -e "AUTHKEY=..." \
     -e "WORKSHOPCOLLECTIONID=..." \
     hackebein/garrysmod
@@ -48,16 +52,18 @@ docker run \
 ## Config
 
 ```
-docker run \
-    --expose 27015 \
+docker run -it \
+    -p 27015:27015/tcp \
+    -p 27015:27015/udp \
     -v ./server.cfg:/opt/steam/garrysmod/cfg/server.cfg \
     hackebein/garrysmod
 ```
 
 ## Example for TTT
 ```
-docker run \
-    --expose 27015 \
+docker run -it \
+    -p 27015:27015/tcp \
+    -p 27015:27015/udp \
     -e "AUTHKEY=..." \
     -e "GAMEMODE=terrortown" \
     -e "MAP=ttt_minecraft_b5" \
