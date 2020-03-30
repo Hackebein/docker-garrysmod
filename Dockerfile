@@ -1,7 +1,6 @@
 FROM hackebein/srcds
 
 ENV \
-	SIGNALS_ENABLE="false" \
 	# App
 	APPS="4020" \
 	#
@@ -44,5 +43,3 @@ ENV \
 		+servercfgfile \${CONFIG} \
 		\${CUSTOMPARAMETERS} \
 	"
-
-COPY cfg $BASEDIR/garrysmod/cfg
