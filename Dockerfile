@@ -20,6 +20,7 @@ ENV \
 	WORKSHOPCOLLECTIONID="" \
 	#
 	# Server config
+	GAME="garrysmod" \
 	TICKRATE="66" \
 	MAXPLAYERS="16" \
 	GAMEMODE="sandbox" \
@@ -28,12 +29,9 @@ ENV \
 	MAPGROUP="mg_active" \
 	CONFIG="server.cfg" \
 	#
-	# Other
-	CUSTOMPARAMETERS="" \
-	#
 	# Start parameters
 	SRCDSPARAMS="\
-		-game garrysmod \
+		-game \${GAME} \
 		-tickrate \${TICKRATE} \
 		-maxplayers \${MAXPLAYERS} \
 		-authkey \${AUTHKEY} \
