@@ -16,8 +16,11 @@ ENV \
 	# http://steamcommunity.com/dev/managegameservers
 	GLST="" \
 	#
-	# Workshop (require API)
-	WORKSHOPCOLLECTIONID="" \
+	# Workshop server download (require API)
+	WORKSHOP="\${WORKSHOPCOLLECTIONID:-}" \
+	#
+	# Workshop client download (require API)
+	WORKSHOPDL="" \
 	#
 	# Server config
 	GAME="garrysmod" \
@@ -35,7 +38,7 @@ ENV \
 		-tickrate \${TICKRATE} \
 		-maxplayers \${MAXPLAYERS} \
 		-authkey \${AUTHKEY} \
-		+host_workshop_collection \${WORKSHOPCOLLECTIONID} \
+		+host_workshop_collection \${WORKSHOP} \
 		+gamemode \${GAMEMODE} \
 		+map \${MAP} \
 		+servercfgfile \${CONFIG} \

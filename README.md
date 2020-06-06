@@ -67,7 +67,8 @@ docker run -it \
     -e "AUTHKEY=..." \
     -e "GAMEMODE=terrortown" \
     -e "MAP=ttt_minecraft_b5" \
-    -e "WORKSHOPCOLLECTIONID=843519054" \
+    -e "WORKSHOP=843519054" \
+    -e "WORKSHOPDL=843519054" \
     -v ./server.cfg:/opt/steam/garrysmod/cfg/server.cfg \
     hackebein/garrysmod
 ```
@@ -92,6 +93,12 @@ MAXPLAYERS: Max players
 (`Default: 16`)
 
 CUSTOMPARAMETERS: additional parameters
+(`Default: `)
+
+WORKSHOP: downloads workshop collection for server
+(`Default: `)
+
+WORKSHOPDL: downloads workshop collection for client before joining
 (`Default: `)
 
 ## More Options
