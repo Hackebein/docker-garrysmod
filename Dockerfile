@@ -2,7 +2,7 @@ FROM hackebein/srcds
 
 ENV \
 	# App
-	APPS="4020,232330" \
+	APPS="4020 -validate -language en,232330 -validate -language en" \
 	#
 	# API
 	# http://steamcommunity.com/dev/apikey
