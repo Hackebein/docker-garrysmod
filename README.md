@@ -61,6 +61,9 @@ docker run -it \
 
 ## Example for TTT
 ```
+# make sure server.cfg file exists
+touch ./server.cfg
+# start container
 docker run -it \
     -p 27015:27015/tcp \
     -p 27015:27015/udp \
@@ -70,9 +73,11 @@ docker run -it \
     -e "WORKSHOP=843519054" \
     -e "WORKSHOPDL=843519054" \
     -v ./server.cfg:/opt/steam/garrysmod/cfg/server.cfg \
+    -v ./overlay:/opt/overlay \
     hackebein/garrysmod
 ```
 
+Checkout [overlay](https://github.com/Hackebein/docker-srcds#overlay-folder) to overwrite files that are provided by Steam.
 Go to [Workshopp Collection](https://steamcommunity.com/sharedfiles/filedetails/?id=843519054)
 
 ## Additional Environment
@@ -103,4 +108,4 @@ WORKSHOPDL: downloads workshop collection for client before joining
 
 ## More Options
 
-You can found more configuration options on the parent image page [hackebein/srcds](https://hub.docker.com/r/hackebein/srcds)
+You can found more configuration options on the parent image page [hackebein/srcds](https://github.com/Hackebein/docker-srcds)
